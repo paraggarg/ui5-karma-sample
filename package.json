@@ -1,0 +1,27 @@
+{
+  "name": "bulletinboard",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "@sap/ui5-builder-webide-extension": "1.0.x",
+    "@ui5/cli": "2.4.4",
+    "eslint": "^5.16.0",
+    "karma": "^5.2.3",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-ui5": "^2.3.0",
+    "ui5-middleware-simpleproxy": "^0.5.1"
+  },
+  "scripts": {
+    "karma-ci": "karma start karma-ci.conf.js",
+    "karma": "karma start",
+    "build": "ui5 build --clean-dest --include-task=generateManifestBundle generateCachebusterInfo"
+  },
+  "ui5": {
+    "dependencies": [
+      "@sap/ui5-builder-webide-extension",
+      "ui5-middleware-simpleproxy"
+    ]
+  },
+  "private": "true"
+}
